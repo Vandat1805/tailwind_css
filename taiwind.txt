@@ -1,0 +1,47 @@
+thiết lập môi trường tailwind
+npm init -y
+npm install -D tailwindcss postcss autoprefixer vite
+npx tailwindcss init -p
+mở file package.json
+
+"test": "echo\"Error: no test specified\" && ẽit 1"
+đổi thành
+"dev": "vite"
+
+npm run dev
+
+tạo thư mục build có file tailwind.css
+npx tailwindcss-cli build css/tailwind.css -o build/tailwind.css
+sau khi thư mục buil và file taiwind.css trở lại file html và chèn link
+    <link rel="stylesheet" href="./build/tailwind.css" />
+
+
+
+config creation (làm thuộc tính mà tailwin không có)
+mở file tailwin config css
+dùng extend để kế thừa các thuộc tính spacing, color...
+ theme: {
+    extend: {
+      spacing: {
+        35: "35px",
+      },
+    },
+  },
+sửa config cần phải build lại bằng lệnh
+npx tailwincss -i css/tailwind.css -o build/tailwind.css --watch
+
+sử dụng jit mode trong file config
+mode: "jit",
+purge:[
+	"./**/*.html", đường dẫn file đang sử dụng
+	"./**/*.{js,jsx,ts,tsx,vue}"
+],
+
+cú pháp sử dụng trực tiếp không config sử dụng jit mode:text-[#ffa400] 
+  
+code responsive
+sm:640px
+md:768px
+lg:1024px
+xl:1280px
+
