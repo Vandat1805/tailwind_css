@@ -1,6 +1,6 @@
 thiết lập môi trường tailwind
 npm init -y
-npm install -D tailwindcss postcss autoprefixer vite
+npm install -D tailwindcss postcss autoprefixer vite (nếu muốn sử dụng source code)
 npx tailwindcss init -p
 mở file package.json
 
@@ -8,7 +8,7 @@ mở file package.json
 đổi thành
 "dev": "vite"
 
-npm run dev
+npm run dev (nếu muốn sử dụng source code)
 
 tạo thư mục build có file tailwind.css
 npx tailwindcss-cli build css/tailwind.css -o build/tailwind.css
@@ -45,3 +45,41 @@ md:768px
 lg:1024px
 xl:1280px
 
+sm: tailwind-class
+md: tailwind-class
+lg: tailwind-class
+xl: tailwind-class
+
+hover
+nếu mún hover chuột ở thẻ cha mà con đổi màu
+thẻ cha phải có class group
+thẻ con group-hover: màu
+==>tương tự cho focus
+hover scale
+motion-safe:hover:scale-110
+
+before,after
+phải có class before
+cú pháp: before=""
+
+
+relative
+before:content-[attr(before)]
+before:absolute
+before-inset-0
+before: rounded-xl
+before:bg-current lấy background theo màu chữ
+before:opacity-25
+
+làm dark mode
+vào file config taiwind js
+darkmode :"flase";
+sửa thành darkmode: "class"
+tạo một toogle
+input type checkbox class hidden
+lable để style cần class inline-block
+toogle cần có và label thuộc tính for của lable giống với id của input 
+
+thêm class vào html
+leading là line height
+sử dụng script evondev blog
