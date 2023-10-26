@@ -72,6 +72,7 @@ before:bg-current lấy background theo màu chữ
 before:opacity-25
 
 làm dark mode
+
 vào file config taiwind js
 darkmode :"flase";
 sửa thành darkmode: "class"
@@ -82,4 +83,85 @@ toogle cần có và label thuộc tính for của lable giống với id của 
 
 thêm class vào html
 leading là line height
-sử dụng script evondev blog
+sử dụng script evondev blog 
+https://evondev.com/huong-dan-lam-giao-dien-dark-mode-cho-website-tu-a-z/
+code darkmode:
+   <label for="toggle" class="inline-block cursor-pointer toggle-switch">
+      <input
+        type="checkbox"
+        name=""
+        id="toggle"
+        class="darkmode-input hidden"
+      />
+      <div
+        class="
+          w-[100px]
+          h-[40px]
+          border border-[#ccc]
+          rounded-full
+          fixed
+          right-5
+          bottom-5
+          z-50
+          p-[5px]
+          transition-colors
+        "
+      >
+        <div
+          class="
+            w-7
+            h-7
+            bg-[#ccc]
+            rounded-full
+            transition-transform
+            darkmode-spinner
+          "
+        ></div>
+      </div>
+    </label>
+    <div class="mx-auto max-w-[1200px] grid grid-cols-4 gap-x-5 p-5">
+      <div
+        class="
+          px-5
+          py-8
+          rounded-lg
+          border border-[#eee]
+          text-center
+          bg-white
+          dark:bg-[#0F0D58]
+        "
+      >
+        <img
+          src="https://free3dicon.com/wp-content/uploads/2021/09/compass_perspective_matte_s-2-300x300.png.webp"
+          alt=""
+          class="mb-5 max-w-[100px] mx-auto"
+        />
+        <h3 class="text-lg font-semibold mb-6 text-[#0F0D58] dark:text-white">
+          Recommendation
+        </h3>
+        <div
+          class="
+            text-sm
+            leading-loose
+            text-[#9191B4]
+            font-normal
+            dark:text-white
+          "
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, odio,
+          facilis vero quod natus molestiae autem provident nam corporis sint
+          accusamus excepturi at in, temporibus architecto ad voluptatibus
+          maxime. Tenetur!
+        </div>
+      </div>
+    </div>
+
+nếu muốn config cho dự án vào thư mục css vào file tailwind.css 
+@layer base{
+h1{
+@applt text-[50px]
+}
+}
+
+
+
